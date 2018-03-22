@@ -2,10 +2,5 @@ spring:
   application:
     name: simple-service
   cloud:
-#    discovery:
-#      client:
-#        simple:
-#          local:
-#            service-id: simple-discovery-server
     config:
       uri: ${vcap.services.configserver.credentials.uri:http://user:password@localhost:8888}

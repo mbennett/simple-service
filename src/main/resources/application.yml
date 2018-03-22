@@ -9,7 +9,7 @@ spring:
       enabled: true
 eureka:
   client:
-    enabled: true
+    enabled: false
 #disable basic authentication as spring cloud enables it by default
 security:
   basic:
