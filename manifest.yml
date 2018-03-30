@@ -2,10 +2,12 @@
 applications:
 - name: simple-service
   memory: 1G
-  random-route: true
+  routes:
+  - route: simple-service-64119.cfapps.io
   path: target/simple-service-0.0.1-SNAPSHOT.jar
   services:
    - config-server
    - service-registry
   env:
     SPRING_PROFILES_ACTIVE: dev
+  buildpack: java_buildpack

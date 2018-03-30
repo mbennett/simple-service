@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@TestPropertySource(properties = "testMessage=whatever")
+@TestPropertySource(properties = { "testMessage=whatever", "eureka.client.enabled=false" })
 public class SimpleServiceApplicationTests {
 
     @Test

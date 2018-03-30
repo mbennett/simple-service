@@ -1,24 +1,15 @@
-spring:
-  application:
-    name: simple-service
-  profiles:
-    active:
-    - default
-  cloud:
-    config:
-      enabled: true
-eureka:
-  client:
-    enabled: false
-#disable basic authentication as spring cloud enables it by default
+server:
+  port: 8081
+ribbon:
+  eureka:
+    enabled: true
+info:
+  artifactId: "@project.artifactId@"
+  description: "@project.description@"
+  version: "@project.version@"
 security:
   basic:
     enabled: false
-endpoints:
-  routes:
-    sensitive: false
 management:
   security:
     enabled: false
-server:
-  port: 8081
